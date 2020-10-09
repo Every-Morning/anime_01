@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+
+<head>
+<meta charset="utf-8">
+<title>AnimeNet注册登录页面模板</title>
+<link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/333.ico">
+</head>
+
+<body>
+    <div class="content">
+        <div class="form sign-in">
+            <h2>欢迎回来</h2>
+            <label>
+                <span>邮箱</span>
+                <input type="email" id="email"/>
+            </label>
+            <label>
+                <span>密码</span>
+                <input type="password" id="password" />
+            </label>
+            <p class="forgot-pass"><a href="">忘记密码？</a></p>
+            <button type="button" class="submit" id="login">登 录</button>
+<!--            <button type="button" class="fb-btn">使用 <span>facebook</span> 帐号登录</button>-->
+        </div>
+
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+                    <h2>还未注册？</h2>
+                    <p>立即注册，发现大量机会！</p>
+                </div>
+                <div class="img__text m--in">
+                    <h2>已有帐号？</h2>
+                    <p>有帐号就登录吧，好久不见了！</p>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">注 册</span>
+                    <span class="m--in">登 录</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <h2>立即注册</h2>
+                <label>
+                    <span>用户名</span>
+                    <input type="text" id="r_username" />
+                </label>
+                <label>
+                    <span>密码</span>
+                    <input type="password" id="r_password"  />
+                </label>
+                <label>
+                    <span>确认密码</span>
+                    <input type="password" id="r_password_2" />
+                </label>
+                <label>
+                    <span>邮箱</span>
+                    <input type="email" id="r_email"/>
+                </label>
+                <label>
+                    <button type="button" class="getcode" id="get_code">获取验证码</button>
+                    <input type="text"  class="code" id="input_code" placeholder="验证码"/>
+                </label>
+                <button type="button" class="submit" id="register">注 册</button>
+<!--                <button type="button" class="fb-btn">使用 <span>facebook</span> 帐号注册</button>-->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+    <script>
+        L2Dwidget.init({
+            "model": {
+                //jsonpath控制显示那个小萝莉模型，
+                //(切换模型需要改动)
+//				"https://unpkg.com/(live2d-widget-model-koharu)@1.0.5/assets/(koharu).model.json"
+                jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+                "scale": 1
+            },
+            "display": {
+                "position": "right", //看板娘的表现位置
+                "width": 150,  //小萝莉的宽度
+                "height": 300, //小萝莉的高度
+                "hOffset": 0,
+                "vOffset": -20
+            },
+            "mobile": {
+                "show": true,
+                "scale": 0.5
+            },
+            "react": {
+                "opacityDefault": 0.7,
+                "opacityOnHover": 0.2
+            }
+        });
+    </script>
+<!--	<div style="text-align:center;">-->
+<!--<p>更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>-->
+<!--</div>-->
+</body>
+
+</html>
