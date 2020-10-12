@@ -9,7 +9,7 @@
             <selectKey keyProperty="id" keyColumn="id" resultType="int" order="BEFORE">
                 select max(id)+1 from tb_user;
             </selectKey>
-            insert into tb_user(id,username,email,password,history) values(#{id},#{username},#{email},#{password},#{history})
+            insert into tb_user(id,username,email,password) values(#{id},#{username},#{email},#{password})
         </insert>
     <!--    <select id="query" resultType="Student">-->
     <!--       <include refid="queryAll"></include>-->

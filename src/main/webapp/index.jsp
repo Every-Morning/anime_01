@@ -12,6 +12,6 @@
 </head>
 <body>
 <a href="static/loginandregister.html">登录</a>
-<a href=${pageContext.request.contextPath}/static/anime/code>登录</a>
+<a href=${pageContext.request.contextPath}/static/anime/player?name=元龙>播放</a>
 </body>
 </html>

@@ -5,7 +5,7 @@ public class AnimeUser {
     private String username; // 用户名
     private String email; //  邮箱
     private String password; // 密码
-    private String history; // 浏览纪录 xxx,xxx,xxx 用逗号隔开 取得时候用字符分割方法
+   //private String history; // 浏览纪录 xxx,xxx,xxx 用逗号隔开 取得时候用字符分割方法
 
 
     public AnimeUser() {
@@ -16,19 +16,17 @@ public class AnimeUser {
         this.password = password;
     }
 
-    public AnimeUser(String username, String email, String password, String history) {
+    public AnimeUser(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.history = history;
     }
 
-    public AnimeUser(Integer id, String username, String email, String password, String history) {
+    public AnimeUser(Integer id, String username, String email, String password) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
-        this.history = history;
     }
 
     public Integer getId() {
@@ -63,13 +61,6 @@ public class AnimeUser {
         this.password = password;
     }
 
-    public String getHistory() {
-        return history;
-    }
-
-    public void setHistory(String history) {
-        this.history = history;
-    }
 
     @Override
     public String toString() {  //用于测试 数据库连接是否正常
@@ -78,7 +69,6 @@ public class AnimeUser {
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", history='" + history + '\'' +
                 '}';
     }
 }

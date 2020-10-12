@@ -78,7 +78,7 @@ public class MyController {
 
     @PostMapping(value = "login", produces = "application/json; charset=utf-8")
     @ResponseBody
-    public String login(String email, String password) {
+    public String player(String email, String password) {
         String msg="";
         AnimeUser animeUser = new AnimeUser(email,password);
         if(!animeUserService.isExist(email)){
@@ -92,5 +92,10 @@ public class MyController {
         }
         return msg;
     }
+//    @RequestMapping(value = "player", produces = "application/json; charset=utf-8")
+//    public String player( String name) {
+//
+//        return "redirect:/static/animeplay.html";
+//    }
 
 }
